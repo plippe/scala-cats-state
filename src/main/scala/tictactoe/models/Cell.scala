@@ -1,5 +1,9 @@
 package com.github.plippe.tictactoe.models
 
+/** Code smell:
+  * TicTacToe has a 3x3 grid
+  * Scaling this approach to an MxN grid isn't possible
+  */
 sealed trait Cell extends Product with Serializable
 object Cell {
   case object AA extends Cell
