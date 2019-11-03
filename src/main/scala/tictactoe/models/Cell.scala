@@ -11,4 +11,19 @@ object Cell {
   case object CA extends Cell
   case object CB extends Cell
   case object CC extends Cell
+
+  val all = List(AA, AB, AC, BA, BB, BC, CA, CB, CC)
+
+  def fromString(str: String): Option[Cell] = str.trim.toUpperCase match {
+    case "AA" => Some(AA)
+    case "AB" => Some(AB)
+    case "AC" => Some(AC)
+    case "BA" => Some(BA)
+    case "BB" => Some(BB)
+    case "BC" => Some(BC)
+    case "CA" => Some(CA)
+    case "CB" => Some(CB)
+    case "CC" => Some(CC)
+    case _    => None
+  }
 }
